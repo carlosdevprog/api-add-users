@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000
 const express = require('express')
 const uuid = require('uuid')
 const app = express()
@@ -62,6 +63,6 @@ app.delete('/users/:id', checkUserId, (request, response) => {
 
 
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log('Iniciando... 😊')
 }) 

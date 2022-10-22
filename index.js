@@ -4,8 +4,6 @@ const app = express()
 app.use(express.json())
 const cors = require('cors')
 app.use(cors())
-const port = process.env.PORT || 3000
-
 
 
 const users = []
@@ -64,6 +62,6 @@ app.delete('/users/:id', checkUserId, (request, response) => {
 
 
 
-app.listen(port, () => {
+app.listen(3001, () => {
     console.log('Iniciando... 😊')
 }) 
